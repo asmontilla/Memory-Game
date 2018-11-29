@@ -1,0 +1,230 @@
+@charset "UTF-8";
+body {
+  margin: 0;
+  background-image: url("../img/fondo.jpg");
+  background-size: 100%;
+  text-align: center;
+}
+
+#entrada {
+  background-color: pink;
+  left: 50%;
+  margin-left: -220px;
+  margin-top: 60px;
+  width: 500px;
+  height: 500px;
+  border: 15px solid black;
+  border-radius: 5%;
+  position: absolute;
+}
+#entrada .content {
+  width: 80%;
+  margin: auto;
+}
+
+.azul {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  font-family: "Pacifico", cursive;
+  color: blue;
+  font-size: 30px;
+}
+
+.saludo {
+  margin-bottom: 12px;
+  margin-top: 5px;
+  text-align: center;
+  font-family: "Pangolin", cursive;
+}
+
+#jugador {
+  width: 80%;
+  outline-color: palevioletred;
+  padding: 5px;
+}
+
+.nivel {
+  font-family: "Pangolin", cursive;
+  background-color: orange;
+  color: white;
+  width: 80%;
+  height: 40px;
+  margin-top: 10px;
+  border-radius: 15px;
+  border: none;
+}
+
+#noname {
+  width: 80%;
+  height: 40px;
+  margin: auto;
+  margin-top: 5px;
+  background-color: wheat;
+  justify-content: center;
+}
+#noname .saludo_bold {
+  text-align: center;
+  font-family: "Pangolin", cursive;
+  color: magenta;
+  padding: 8px;
+}
+#noname .saludo_bold .ups {
+  font: bold;
+  color: red;
+}
+
+.entrada-tablero {
+  width: 70%;
+  height: 300px;
+  margin: auto;
+}
+.entrada-tablero .linea {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 7px;
+}
+.entrada-tablero .linea .piña {
+  width: 20%;
+  height: 110px;
+  display: flex;
+  justify-content: space-around;
+  margin: 5px;
+}
+.entrada-tablero .linea .piña .tapada {
+  width: 100%;
+  height: auto;
+  border: solid 3px orange;
+}
+
+.tablero {
+  background-color: rgba(255, 255, 255, 0.5);
+  margin: auto;
+  width: 80%;
+  height: 600px;
+  border: 12px solid black;
+  border-radius: 5%;
+  position: relative;
+}
+.tablero .entrada-tablero #contador {
+  width: 80%;
+  height: 20px;
+  background-color: aliceblue;
+  border: solid 3px blue;
+  padding: 5px;
+  margin-left: 10%;
+  border-radius: 5px;
+  margin-top: 17px;
+}
+
+.none {
+  display: none;
+}
+
+.voltea {
+  transform-style: preserve-3d;
+  transition: all 1s ease-in-out;
+  transform: rotateY(180deg);
+}
+
+.pointer {
+  pointer-events: none;
+}
+
+#intentos {
+  color: blue;
+}
+
+.ups {
+  font: bold;
+}
+
+.filter {
+  filter: grayscale(100%);
+}
+
+.opacity {
+  width: 100%;
+  height: 100vh;
+  opacity: 0.5;
+  position: fixed;
+  background-color: aliceblue;
+  top: 0px;
+  left: 0px;
+}
+
+#modal {
+  top: 15%;
+  background-color: pink;
+  left: 35%;
+  width: 40%;
+  border: 2px solid black;
+  border-radius: 5%;
+  position: absolute;
+  z-index: 1;
+  margin-left: 50%;
+  left: -20%;
+}
+#modal .letmodal {
+  margin-right: 10%;
+  margin-left: 10%;
+  display: flex;
+  width: 80%;
+}
+#modal .letmodal .mod {
+  width: 33%;
+  background-color: bisque;
+  border: 1px solid black;
+}
+
+.naranja {
+  color: orange;
+}
+
+@media (max-width: 800px) {
+  #entrada {
+    background-color: pink;
+    left: 90%;
+    margin-left: -250px;
+    margin-top: 60px;
+    width: 200px;
+    height: 500px;
+    border: 15px solid black;
+    border-radius: 5%;
+    position: absolute;
+  }
+  #entrada .content {
+    width: 80%;
+    margin: auto;
+  }
+
+  #noname {
+    width: 80%;
+    height: 45px;
+    margin: auto;
+    margin-top: 5px;
+    background-color: wheat;
+    justify-content: center;
+  }
+
+  .entrada-tablero .linea {
+    width: 100%;
+    height: 340px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 7px;
+  }
+  .entrada-tablero .linea .piña {
+    width: 55px;
+    height: 55px;
+  }
+  .entrada-tablero .linea .piña .tapada {
+    width: 55px;
+    height: 55px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=SCR, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Pangolin" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico|Pangolin" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+  
+</head>
+<body>
+    
+<div id="entrada" class="">
+            
+    <div class="content">
+        <p class="azul">Memotest</p>
+        <p class="saludo">Hola! 👋Vamos a jugar al Memotest</p>
+        <p class="saludo">Pero antes de empezar...</p>
+        <p class="saludo">Cual es tu nombre ❓</p> 
+        <input id="jugador"  type="text" >  
+        
+        <p class="saludo">Con que dificultad te gustaria jugar?</p>
+        <button id="nivel1" class="nivel">Fácil</button> <br>
+        <button id="nivel2" class="nivel">Intermedio</button> <br>
+        <button id="nivel3" class="nivel">Experto</button>
+        <div id="noname"class="none">
+             <p class="saludo_bold"><span class="ups">Ups...</span> El nombre es requerido </p>
+           
+        </div>
+    </div>
+   
+    </div>
+    <div class="tablero none" id= cuadrotab>
+        <p class="azul">Memotest</p>
+        <p class="saludo" id="nombre"></p>
+        <p class="saludo  blue" >Encontra todos los pares en <span id= "intentos"></span>intentos</p>  
+          
+        <p class="saludo" id="level"></p>
+        <div class="entrada-tablero">
+        <div class="linea">
+            <div class="piña"><img  id="uno" class = "tapada rev " src="img/tapada.jpg" alt="" data-img=""></div>
+            <div class="piña"><img  id="dos" class = "tapada rev " src="img/tapada.jpg" alt="" data-img=""></div>
+            <div class="piña"><img  id="tres" class = "tapada rev " src="img/tapada.jpg" alt="" data-img=""></div>
+            <div class="piña"><img  id="cuatro" class = "tapada rev " src="img/tapada.jpg" alt="" data-img=""></div> 
+        
+        
+            <div class="piña "><img id="cinco" class = "tapada rev " src="img/tapada.jpg" alt=""data-img=""></div>
+            <div class="piña "><img id="seis" class = "tapada rev " src="img/tapada.jpg" alt=""data-img=""></div>
+            <div class="piña "><img id="siete" class = "tapada rev " src="img/tapada.jpg" alt=""data-img=""></div>
+            <div class="piña "><img id="ocho" class = "tapada rev " src="img/tapada.jpg" alt=""data-img=""></div>
+        
+        
+            <div class="piña "><img id="nueve" class = "tapada rev" src="img/tapada.jpg" alt=""data-img=""></div>
+            <div class="piña "><img id="diez" class = "tapada rev" src="img/tapada.jpg" alt=""data-img=""></div>
+            <div class="piña "><img id="once" class = "tapada rev" src="img/tapada.jpg" alt=""data-img=""></div>
+            <div class="piña "><img id="doce" class = "tapada rev" src="img/tapada.jpg" alt=""data-img=""></div>
+            
+        </div>
+        <div id="contador">
+            <p class="saludo">Intentos :<span id="cuenta" class="naranja"></span></p></div>
+        
+        </div>
+    
+    
+    </div>
+    <div id="opa" class="opacity none"></div>    
+    <div id= "modal" class="none">
+        <div id= "modalito"></div>
+        <p id = "ganados"class="saludo"></p>
+        <p class= saludo>Ya puedes volver a jugar</p>
+        <button id="again" class="nivel">volver a Jugar</button>
+        <div id="barra" class="letmodal"> 
+            <div id= "name" class="mod saludo"><p>Nombre</p></div>
+            <div id= "nivel" class="mod saludo"><p>Nivel</p></div>
+            <div id= "edad" class="mod saludo"><p>Intentos</p></div>
+
+        </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>    
+    <script src="js/index.js"></script>
+</body>
+</html>

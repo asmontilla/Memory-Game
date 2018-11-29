@@ -1,0 +1,273 @@
+body{
+
+    margin:0;
+    background-image:url("../img/fondo.jpg");
+    background-size: 100%;
+    text-align: center;
+}
+
+   
+
+#entrada {
+        background-color:pink;
+        left: 50%;
+        margin-left:-220px;
+        margin-top: 60px;
+        width: 500px;
+        height: 500px;
+        border: 15px solid black;
+        border-radius:5%;
+        position: absolute;
+        .content{
+            width:80%;
+            margin:auto;
+        }
+       
+    }
+    
+.azul{
+        width: 80%;
+        margin:auto; 
+        text-align: center;
+        font-family: 'Pacifico',cursive;
+        color: blue;
+        font-size: 30px;
+    }
+    .saludo{
+    // height: 10px;
+    margin-bottom: 12px;
+    margin-top: 5px;
+    text-align: center;
+    font-family: "Pangolin", cursive;
+
+    }
+ 
+    // este es el input donde se agrega el nombre del jugador
+    #jugador {
+        width: 80%;
+        outline-color: palevioletred;
+        padding: 5px;
+    }
+    
+
+.nivel{
+    font-family: "Pangolin", cursive;
+    background-color: orange;
+    color: white;
+    width:80%;
+    height:40px ;
+    margin-top:10px;
+    border-radius: 15px;
+    border: none;  
+
+}
+
+#noname{
+    //aqui ira el estilo de el mensaje de que falta el nombre
+width: 80%;
+height: 40px;
+margin:auto; 
+margin-top: 5px;
+background-color:wheat;
+justify-content: center; 
+    .saludo_bold{
+    text-align: center;
+    font-family: 'Pangolin',cursive;
+    color: magenta;
+    padding: 8px;
+    .ups{
+        font: bold;
+        color: red
+    }
+     /// me falta como ponerla negrita  solo al ups...   
+}
+    
+}
+.entrada-tablero{
+    width: 70%;
+    height: 300px;
+    margin: auto;
+    .linea{
+        width: 100%;
+        display: flex;
+        justify-content:space-between; 
+        
+        flex-wrap:wrap;
+        margin-top: 7px;
+    .piña {
+        // width: 20%;
+        // height:100px;
+        // display: flex;
+        // justify-content:space-around;
+        width: 20%;
+        height: 110px;
+        display: flex;
+        justify-content: space-around;
+        margin: 5px;
+      
+    .tapada{
+        width: 100%;
+        height: auto;
+        border:solid 3px orange;
+    }    
+    }    
+    }
+}
+
+.tablero{
+    background-color: rgba(255, 255, 255, 0.5);
+    margin: auto;
+    width: 80%;
+    height: 600px;
+    border: 12px solid black;
+    border-radius:5%;
+    position: relative;
+
+    .entrada-tablero{
+        // width: 70%;
+        // margin: auto;
+        #contador{
+            width: 80%;
+            height: 20px;
+            background-color: aliceblue;
+            border: solid 3px blue;
+            padding: 5px;
+            margin-left: 10%;
+            border-radius: 5px;
+            margin-top: 17px;
+            
+    
+        }
+
+    }
+  
+}
+
+.none{
+    display: none;
+}
+
+.voltea{
+    transform-style: preserve-3d;
+    transition: all 1s ease-in-out;
+    transform: rotateY(180deg);
+}
+
+.pointer{
+    pointer-events: none;/// esta funcionalidad me va a permitir saber si ya se le hizo click a esa carte y deja de contar
+
+}
+#intentos{
+    color:blue;
+
+}
+.ups{
+    font: bold;
+}
+
+.filter{
+    filter: grayscale(100%);
+}
+
+.opacity{
+    width: 100%;
+    height: 100vh;
+    opacity: 0.5;
+    position: fixed;
+    background-color: aliceblue;
+    top:0px;
+    left:0px;
+
+    // position: absolute;
+   
+}
+#modal{
+   top: 15%;
+    background-color:pink;
+    left: 35%;// margin-top: 60px;
+    width: 40%;
+    // height: 30%;
+    border: 2px solid black;
+    border-radius:5%; 
+    position: absolute;
+    z-index:1;
+    margin-left:50% ;
+    left:-20%; // lo pone adelante
+    .letmodal{
+        margin-right: 10%;
+        margin-left: 10%;
+        display: flex;
+        // justify-content: space-around;
+        width: 80%;
+        // height: 30%;/// para que se alargue a medida que se llena el local store
+      
+
+        .mod{
+            width:33%;
+            // height:90%;
+            background-color: bisque;
+            border: 1px solid black;
+        }
+    
+    }
+}
+.naranja{
+     color:orange;
+ }
+
+ @media(max-width:800px){
+    #entrada {
+        // 
+        background-color:pink;
+        left: 90%;
+        margin-left:-250px;
+        margin-top: 60px;
+        width: 200px;
+        height: 500px;
+        border: 15px solid black;
+        border-radius:5%;
+        position: absolute;
+        .content{
+            width:80%;
+            margin:auto;
+        }
+       
+    }
+
+#noname{
+
+width: 80%;
+height: 45px;
+margin:auto; 
+margin-top: 5px;
+background-color:wheat;
+justify-content: center; 
+}
+.entrada-tablero{
+    .linea{
+        width: 100%;
+        height: 340px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: 7px;
+        
+        .piña{
+            width: 55px;
+            height: 55px;
+            .tapada{
+                width: 55px;
+                height: 55px;
+            }
+        }
+        }
+
+
+}
+
+}
+
+// me faltaria colocar las 4 lineas de 3 cartas en vez de 3 de 4
+// .linea{
+//     display: flex;
+// }
