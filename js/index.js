@@ -12,14 +12,14 @@ $("#nivel1").on("click",function(){
      nivel = "Fácil"
      jugador = $("#jugador").val();              
      if(jugador.length == 0){
-        $("#noname").removeClass("none")//valida que el input tenga un valor, si no lo tiene muestra #noname 
+        $("#noname").removeClass("none")
         // 
-        setTimeout(function (){/// este funcion ayuda a desaparecer luego de 4 segundos 
+        setTimeout(function (){
         $("#noname").addClass("none")   
         },3000)
     }else {
         $("#nombre").html("Hola "+jugador) 
-        $("#intentos").html(" " + intentos+" ")/// aqui se pinto intentos en azul
+        $("#intentos").html(" " + intentos+" ")
         $("#level").html("Nivel Fácil")
         $(".tablero").removeClass("none")// .tablero es la caja que contiene a las cartas
         $("#entrada").addClass("none")
@@ -30,16 +30,15 @@ $("#nivel2").on("click",function(){
     nivel = "Intermedio"
     jugador = $("#jugador").val();              
     if(jugador.length == 0){
-       $("#noname").removeClass("none")//valida que el input tenga un valor, si no lo tiene muestra #noname 
-       // 
-       setTimeout(function (){/// este funcion ayuda a desaparecer luego de 4 segundos 
+       $("#noname").removeClass("none")//valida que el input tenga un valor, si no lo tiene muestra #noname
+       setTimeout(function (){
        $("#noname").addClass("none")   
        },3000)
    }else {
        $("#nombre").html("Hola "+jugador) 
-       $("#intentos").html(" " + intentos+" ")/// aqui se pinto intentos en azul
+       $("#intentos").html(" " + intentos+" ")
        $("#level").html("Nivel Intermedio")
-       $(".tablero").removeClass("none")// .tablero es la caja que contiene a las cartas
+       $(".tablero").removeClass("none")
        $("#entrada").addClass("none")
    }
 })
@@ -48,20 +47,19 @@ $("#nivel3").on("click",function(){
     nivel = "Experto"
     jugador = $("#jugador").val();              
     if(jugador.length == 0){
-       $("#noname").removeClass("none")//valida que el input tenga un valor, si no lo tiene muestra #noname 
+       $("#noname").removeClass("none")
        // 
-       setTimeout(function (){/// este funcion ayuda a desaparecer luego de 4 segundos 
+       setTimeout(function (){
        $("#noname").addClass("none")   
        },3000)
    }else {
        $("#nombre").html("Hola "+jugador) 
-       $("#intentos").html(" " + intentos+" ")/// aqui se pinto intentos en azul
+       $("#intentos").html(" " + intentos+" ")
        $("#level").html("Nivel Experto")
-       $(".tablero").removeClass("none")// .tablero es la caja que contiene a las cartas
+       $(".tablero").removeClass("none")
        $("#entrada").addClass("none")
    }
 })
-
 
 /// una vez que hago click en las piña
 $(".tapada").on ("click",function(){
@@ -92,8 +90,8 @@ $(".tapada").on ("click",function(){
           }
           jugadas = jugadas +1
           $("#"+segundoClick.id).addClass("pointer")
-          $("#cuenta").html( " " + jugadas) // se pinta con el id del span
-         // jugadas me cuenta el numero de intentos 
+          $("#cuenta").html( " " + jugadas) 
+         // jugadas cuenta el numero de intentos 
         /// si ambos id son distintos pero las imagenes son iguales es un acierto 
         if ( primerClick.id!=segundoClick.id && primerClick.img==segundoClick.img ) {
             aciertos = aciertos + 1
@@ -110,47 +108,34 @@ $(".tapada").on ("click",function(){
                     console.log("ganaste!!!!")
                   $("#opa").removeClass("none")
                   $("#modal").removeClass("none")
-                  /// aqui el opacity
                   $("#ganados").html("Ganaste 🎉! con "+jugadas+" intentos.")
-                  // aqui debo traer el nombre de quien jugo y agregarla en la caja con id Nombre
-                //   $("#name").html("Nombre "+jugador)
-                //   $("#nivel").html("Nivel "+ nivel)
-                //   $("#edad").html( "Intentos "+jugadas )
+               
                 
                   var jugadores={
                     nombre:jugador,
                     nivel:nivel,
                     intentos:jugadas,
                     }
-                    // var rank;
-                  // no entiendo q quiere decir esto
-
+                  
                     if(rank== null){
                         rank=[]  
                     }
                     console.log(rank)
                     rank.push(jugadores)
-                    
-                   
-
                     localStorage.setItem("ganadores",JSON.stringify(rank));
                     for(var i= 0; i<rank.length;i++){
                         $("#name").append(`<p>${rank[i].nombre}</p>`)
                         $("#nivel").append(`<p>${rank[i].nivel}</p>`)
                         $("#edad").append(`<p>${rank[i].intentos}</p>`)
                     }
-                } 
-
-            
-                    
+                }            
+                    // en caso de que al destapar sean distintas
             } else{
                 setTimeout(function (){
                     $("#" +primerClick.id).attr("src","img/tapada.jpg")
                     $("#" +segundoClick.id).attr("src","img/tapada.jpg")
                     $("#" +primerClick.id).removeClass("voltea") 
                     $("#" +segundoClick.id).removeClass("voltea") 
-                    //// esto de arriba es para que me funcione de nuevo el flip
-            // jugadas = jugadas + 1
                     click = 0
                     console.log("distintas")
                     $("#"+primerClick.id).removeClass("pointer")
@@ -193,41 +178,13 @@ for (var i = 0; i < imgsLength; i++) {
 $('.rev').eq(i).attr('data-img', arr[i]) 
 }
 
-$('.rev').on('click', function() {
-
-
-})
 /// para refrescar la pagina
 $("#again").on("click",function(){
     location.reload()
 
 })
 
-//// mefalta hacer el random
-/// el opacity del modal para q el tablero de fondo se vea mas opaco listo
-/// el historial de jugadas para eso creo que debo convertir los datos nombre nivel e intentos en un objeto 
-//luego en string y luego en objeto de nuevo para sacarlos 
-  // para convertir imagen en ob
-  var kilombo;
-  kilombo=2
-  if( jugadas== kilombo &&  primerClick.id!=segundoClick.id && primerClick.img==segundoClick.img){
-    setTimeout(function (){
-        $("#" +primerClick.id).addClass("filter")
-        $("#" +segundoClick.id).addClass("filter")
-        },1000)
 
-
-        if(aciertos==6){ 
-            console.log("ganaste!!!!")
-          $("#opa").removeClass("none")
-          $("#modal").removeClass("none")
-          /// aqui el opacity
-          $("#ganados").html("Ganaste 🎉! con "+jugadas+" intentos.")
-
-
-
-
-  }}
 
 
  
