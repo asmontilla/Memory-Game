@@ -104,11 +104,12 @@ $(".tapada").on ("click",function(){
                 click = 0
                 },1000)
 
-                if(aciertos==6){ 
+                if(aciertos == 6){ 
                     console.log("ganaste!!!!")
                   $("#opa").removeClass("none")
                   $("#modal").removeClass("none")
                   $("#ganados").html("Ganaste 🎉! con "+jugadas+" intentos.")
+                document.getElementById("audio").play();
                
                 
                   var jugadores={
@@ -153,6 +154,7 @@ $(".tapada").on ("click",function(){
                 $("#name").html("Nombre "+jugador)
                 $("#nivel").html("Nivel "+ nivel)
                 $("#edad").html( "Intentos "+(jugadas))
+                document.getElementById("looser").play();
                 // si jugadas es igual a intentos + 1 y aun no he tenido los 6 aciertos
             }
     }   

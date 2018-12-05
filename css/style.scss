@@ -1,5 +1,4 @@
 body{
-
     margin:0;
     background-image:url("../img/fondo.jpg");
     background-size: 100%;
@@ -34,7 +33,6 @@ body{
         font-size: 30px;
     }
     .saludo{
-    // height: 10px;
     margin-bottom: 12px;
     margin-top: 5px;
     text-align: center;
@@ -49,7 +47,7 @@ body{
         padding: 5px;
     }
     
-
+// me estaria faltando el sombreado al pasar sobre los botones
 .nivel{
     font-family: "Pangolin", cursive;
     background-color: orange;
@@ -61,9 +59,8 @@ body{
     border: none;  
 
 }
-
+//aqui ira el estilo de el mensaje de que falta el nombre
 #noname{
-    //aqui ira el estilo de el mensaje de que falta el nombre
 width: 80%;
 height: 40px;
 margin:auto; 
@@ -78,8 +75,7 @@ justify-content: center;
     .ups{
         font: bold;
         color: red
-    }
-     /// me falta como ponerla negrita  solo al ups...   
+    }   
 }
     
 }
@@ -90,15 +86,10 @@ justify-content: center;
     .linea{
         width: 100%;
         display: flex;
-        justify-content:space-between; 
-        
+        justify-content:space-between;   
         flex-wrap:wrap;
         margin-top: 7px;
     .piña {
-        // width: 20%;
-        // height:100px;
-        // display: flex;
-        // justify-content:space-around;
         width: 20%;
         height: 110px;
         display: flex;
@@ -124,8 +115,6 @@ justify-content: center;
     position: relative;
 
     .entrada-tablero{
-        // width: 70%;
-        // margin: auto;
         #contador{
             width: 80%;
             height: 20px;
@@ -146,15 +135,15 @@ justify-content: center;
 .none{
     display: none;
 }
-
+/// animacion
 .voltea{
     transform-style: preserve-3d;
     transition: all 1s ease-in-out;
     transform: rotateY(180deg);
 }
-
+// deja de contar luego del click
 .pointer{
-    pointer-events: none;/// esta funcionalidad me va a permitir saber si ya se le hizo click a esa carte y deja de contar
+    pointer-events: none; 
 
 }
 #intentos{
@@ -162,7 +151,7 @@ justify-content: center;
 
 }
 .ups{
-    font: bold;
+    font-weight: bold;
 }
 
 .filter{
@@ -177,29 +166,24 @@ justify-content: center;
     background-color: aliceblue;
     top:0px;
     left:0px;
-
-    // position: absolute;
    
 }
 #modal{
    top: 15%;
     background-color:pink;
-    left: 35%;// margin-top: 60px;
-    width: 40%;
-    // height: 30%;
+    width: 75%;
     border: 2px solid black;
     border-radius:5%; 
     position: absolute;
     z-index:1;
     margin-left:50% ;
-    left:-20%; // lo pone adelante
+    left:-38%; // lo pone adelante
     .letmodal{
         margin-right: 10%;
         margin-left: 10%;
         display: flex;
-        // justify-content: space-around;
         width: 80%;
-        // height: 30%;/// para que se alargue a medida que se llena el local store
+     
       
 
         .mod{
@@ -266,3 +250,4 @@ justify-content: center;
 
 }
 
+ 
