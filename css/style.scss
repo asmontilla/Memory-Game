@@ -135,7 +135,7 @@ justify-content: center;
 .none{
     display: none;
 }
-/// animacion
+/// animation
 .voltea{
     transform-style: preserve-3d;
     transition: all 1s ease-in-out;
@@ -177,7 +177,7 @@ justify-content: center;
     position: absolute;
     z-index:1;
     margin-left:50% ;
-    left:-38%; // lo pone adelante
+    left:-38%; 
     .letmodal{
         margin-right: 10%;
         margin-left: 10%;
@@ -188,7 +188,6 @@ justify-content: center;
 
         .mod{
             width:33%;
-            // height:90%;
             background-color: bisque;
             border: 1px solid black;
         }

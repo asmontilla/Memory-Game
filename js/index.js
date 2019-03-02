@@ -3,7 +3,7 @@ var jugador;
 var intentos=0;
 var click = 0;
 var primerClick;
-var segundoClick
+var segundoClick;
 var aciertos = 0
 var jugadas = 0
 var nivel = "ninguno"
@@ -48,7 +48,7 @@ $("#nivel3").on("click",function(){
     jugador = $("#jugador").val();              
     if(jugador.length == 0){
        $("#noname").removeClass("none")
-       // 
+
        setTimeout(function (){
        $("#noname").addClass("none")   
        },3000)
@@ -61,10 +61,9 @@ $("#nivel3").on("click",function(){
    }
 })
 
-/// una vez que hago click en las piña
 $(".tapada").on ("click",function(){
     click = click + 1 
-    console.log(click);
+
     
      if( click == 1){// se convierte en objeto a la imagen para poder comparar
         $(this).addClass("voltea")
